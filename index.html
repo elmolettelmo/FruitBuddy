@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FruitBuddy</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8ffe6;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #87c232;
+      padding: 20px;
+      color: #fff;
+      font-size: 28px;
+      font-weight: bold;
+    }
+    .content {
+      padding: 30px;
+    }
+    .content h2 {
+      color: #4c7a1f;
+    }
+    .content p {
+      width: 70%;
+      margin: auto;
+      color: #333;
+      line-height: 1.5;
+    }
+    footer {
+      background-color: #87c232;
+      padding: 10px;
+      color: #fff;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    FruitBuddy
+  </header>
+
+  <div class="content">
+    <h2>Smart Fruit Recommendations</h2>
+    <p>
+      FruitBuddy is a friendly chatbot that recommends fruits based on your taste and health needs.
+      It offers quick, personalized suggestions so healthy snacking feels simple and fun. Try chatting now.
+    </p>
+  </div>
+
+  <footer>
+    © 2025 FruitBuddy. All rights reserved.
+  </footer>
+
+  <!-- Watson Assistant Embed Code -->
+  <script>
+    window.watsonAssistantChatOptions = {
+      integrationID: "a1ca76d9-3c2b-4d75-9a24-595e0f309745",
+      region: "eu-de",
+      serviceInstanceID: "22634702-f94d-4721-8c33-a7b62240dd8d",
+      onLoad: async (instance) => { await instance.render(); }
+    };
+    setTimeout(function(){
+      const t=document.createElement('script');
+      t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + 
+      (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+      document.head.appendChild(t);
+    });
+  </script>
+
+</body>
+</html>
